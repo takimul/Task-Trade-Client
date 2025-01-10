@@ -8,6 +8,8 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { useNavigate } from "react-router";
 import axios from "axios";
 import { ThemeContext } from "../Provider/ThemeProvider";
+import { motion } from "framer-motion";
+import { FcGoogle } from "react-icons/fc";
 
 const SignUp = () => {
   const {
@@ -18,8 +20,13 @@ const SignUp = () => {
   } = useForm();
   const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
-  const { createUser, updateCurrentUser, setLoading, loading } =
-    useContext(AuthContext);
+  const {
+    createUser,
+    updateCurrentUser,
+    setLoading,
+    loading,
+    signInWithGoogle,
+  } = useContext(AuthContext);
 
   // Access the theme from context
   const { theme } = useContext(ThemeContext);
@@ -84,6 +91,42 @@ const SignUp = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleGoogleSignIn = () => {
+    setLoading(true);
+    signInWithGoogle()
+      .then(async (result) => {
+        const user = result.user;
+        if (user) {
+          const userToSave = {
+            name: user.displayName,
+            email: user.email,
+            image: user.photoURL,
+          };
+
+          try {
+            const response = await axios.post(
+              "https://task-trade-server.vercel.app/users",
+              userToSave
+            );
+            if (response.status === 201 || response.status === 200) {
+              toast.success("Google Login successful!");
+              navigate("/");
+            }
+          } catch (error) {
+            console.error("Error saving user to database:", error);
+            toast.error("Failed to save user data. Please try again later.");
+          }
+        }
+      })
+      .catch((error) => {
+        console.error("Error during Google login:", error);
+        toast.error("Google Login failed. Please try again.");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   // Apply theme classes dynamically
@@ -235,6 +278,30 @@ const SignUp = () => {
             >
               Sign Up
             </button>
+
+            <div className="my-6 text-center">
+              <p
+                className={`text-sm ${
+                  theme === "dark" ? "text-gray-300" : "text-gray-500"
+                }`}
+              >
+                or
+              </p>
+              <motion.button
+                type="button"
+                onClick={handleGoogleSignIn}
+                className={`w-full px-4 py-2 mt-2 font-semibold ${
+                  theme === "dark"
+                    ? "text-gray-300 bg-gray-700 hover:bg-gray-600"
+                    : "text-gray-700 bg-gray-100 hover:bg-gray-200"
+                } rounded-md focus:outline-none flex items-center justify-center`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FcGoogle className="w-5 h-5 mr-2" />
+                Sign in with Google
+              </motion.button>
+            </div>
           </form>
         )}
         <ToastContainer />

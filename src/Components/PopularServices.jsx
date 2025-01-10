@@ -57,7 +57,7 @@ const PopularServices = () => {
       <h2 className="text-2xl font-bold text-center mb-8">Popular Services</h2>
 
       {/* Service Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8 px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {services.slice(0, 6).map((service, idx) => (
           <motion.div
             whileHover={{ scale: 1.1 }}
@@ -70,12 +70,12 @@ const PopularServices = () => {
             } rounded-lg shadow-lg overflow-hidden`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: idx * 0.1 }}
+            transition={{ duration: 0.1, delay: idx * 0.1 }}
           >
             <img
               src={service.imageUrl}
               alt={service.name}
-              className="w-full h-80 object-cover"
+              className="w-full h-80 "
             />
             <div className="p-4">
               <h3 className="text-lg font-semibold">{service.name}</h3>

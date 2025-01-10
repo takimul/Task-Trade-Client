@@ -334,16 +334,6 @@ const AboutUs = () => {
               Ready to get started with your home repair project? Contact us
               today and let Task Trade handle the work!
             </p>
-            <a
-              href="/contact"
-              className={`px-6 py-3 text-lg font-semibold rounded-md hover:bg-green-700 focus:outline-none shadow-md ${
-                theme === "dark"
-                  ? "bg-neon-green text-white"
-                  : "bg-green-600 text-white"
-              }`}
-            >
-              Contact Us
-            </a>
           </div>
         </div>
       </div>

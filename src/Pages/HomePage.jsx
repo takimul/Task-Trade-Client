@@ -16,7 +16,7 @@ const HomePage = () => {
       </Helmet>{" "}
       <div>
         <div
-          className="relative h-96 lg:h-[600px] bg-cover bg-center"
+          className="relative h-96 lg:h-[480px] bg-no-repeat bg-cover bg-center"
           style={{
             backgroundImage:
               "url('https://i.ibb.co/wzd5YG7/repairman-working-on-radiator-wrench-260nw-1712669488.webp')",
