@@ -42,7 +42,7 @@ const HomePage = () => {
         >
           Welcome to Home
         </motion.h1>
-        <div>
+        <div className="px-6">
           <PopularServices></PopularServices>
         </div>
         <div>
