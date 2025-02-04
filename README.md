@@ -72,4 +72,10 @@ TaskTrade is designed to look and function beautifully across all devices, from 
 - Frontend: firebase
 - Backend: Vercel
 
+## 🚀 Installation Guide
+
+### **1. Clone the Repository**
+
+```bash
+git clone https://github.com/your-username/task-hive-client.git
 ---
