@@ -169,7 +169,7 @@ const Navbar = () => {
                         <NavLink
                           to={dLink.path}
                           onClick={() => setIsMenuOpen(false)}
-                          className="hover:text-yellow-400 block px-4 py-2"
+                          className="hover:text-blue-400 block px-4 py-2"
                         >
                           {dLink.name}
                         </NavLink>
@@ -232,7 +232,7 @@ const Navbar = () => {
               <NavLink
                 to={link.path}
                 className={({ isActive }) =>
-                  `hover:text-orange-400 ${
+                  `hover:text-blue-400 ${
                     link.name === "Dashboard" ? "pointer-events-none" : ""
                   } ${
                     isActive
