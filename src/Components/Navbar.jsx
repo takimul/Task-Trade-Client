@@ -142,8 +142,8 @@ const Navbar = () => {
                         onClick={() => setIsMenuOpen(false)}
                         className={({ isActive }) =>
                           isActive
-                            ? "text-yellow-400 font-bold block px-4 py-2"
-                            : "hover:text-yellow-400 block px-4 py-2"
+                            ? "text-blue-400 font-bold block px-4 py-2"
+                            : "hover:text-blue-400 block px-4 py-2"
                         }
                       >
                         {link.name}
@@ -157,8 +157,8 @@ const Navbar = () => {
                     onClick={(e) => e.preventDefault()}
                     className={({ isActive }) =>
                       isActive
-                        ? "text-yellow-400 font-bold block px-4 py-2 cursor-not-allowed"
-                        : "hover:text-yellow-400 block px-4 py-2 cursor-not-allowed"
+                        ? "text-blue-400 font-bold block px-4 py-2 cursor-not-allowed"
+                        : "hover:text-blue-400 block px-4 py-2 cursor-not-allowed"
                     }
                   >
                     <span className="text-gray-400">Dashboard</span>
@@ -236,8 +236,8 @@ const Navbar = () => {
                     link.name === "Dashboard" ? "pointer-events-none" : ""
                   } ${
                     isActive
-                      ? "text-yellow-400 font-bold block px-4 py-2"
-                      : "hover:text-yellow-400 block px-4 py-2"
+                      ? "text-blue-400 font-bold block px-4 py-2"
+                      : "hover:text-blue-400 block px-4 py-2"
                   }`
                 }
               >
@@ -262,10 +262,10 @@ const Navbar = () => {
                         <NavLink
                           to={dLink.path}
                           className={({ isActive }) =>
-                            `hover:text-orange-400  ${
+                            `hover:text-blue-400  ${
                               isActive
-                                ? "text-yellow-400 font-bold block px-4 py-2"
-                                : "hover:text-yellow-400 block px-4 py-2"
+                                ? "text-blue-400 font-bold block px-4 py-2"
+                                : "hover:text-blue-400 block px-4 py-2"
                             }`
                           }
                         >
@@ -320,7 +320,7 @@ const Navbar = () => {
                 </button>
               </NavLink>
               <NavLink to="/sign-up">
-                <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
+                <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
                   Register
                 </button>
               </NavLink>
