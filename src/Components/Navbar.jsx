@@ -68,8 +68,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`navbar fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-opacity-80 bg-gray-900 shadow-lg" : "bg-transparent"
+      className={`navbar fixed top-0 left-0 w-full z-50 transition-colors duration-300 bg-gray-200 border-b-2 ${
+        isScrolled ? "bg-opacity-80 bg-gray-900 shadow-lg" : "bg-transparent "
       } ${theme === "dark" ? "dark" : ""}`}
     >
       <div className="flex items-center justify-between w-full lg:w-1/2 px-4 lg:px-8 ">
