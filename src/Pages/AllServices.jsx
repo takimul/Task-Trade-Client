@@ -193,8 +193,8 @@ const AllServices = () => {
                 onClick={handleSearchClick}
                 className={`px-6 w-fit py-2  my-2 text-lg font-semibold rounded-md ${
                   theme === "light"
-                    ? "bg-yellow-500 text-white hover:bg-yellow-600"
-                    : "bg-yellow-400 text-black hover:bg-yellow-500"
+                    ? "bg-blue-500 text-white hover:bg-blue-600"
+                    : "bg-blue-400 text-black hover:bg-blue-500"
                 }`}
               >
                 Search
@@ -232,8 +232,8 @@ const AllServices = () => {
               onClick={() => handlePageChange(currentPage - 1)}
               className={`px-4 py-4 rounded-md ${
                 theme === "light"
-                  ? "bg-yellow-500 text-white hover:bg-yellow-600"
-                  : "bg-yellow-400 text-black hover:bg-yellow-500"
+                  ? "bg-blue-500 text-white hover:bg-blue-600"
+                  : "bg-blue-400 text-black hover:bg-blue-500"
               }`}
             >
               <IoIosArrowBack />
@@ -243,8 +243,8 @@ const AllServices = () => {
               onClick={() => handlePageChange(currentPage + 1)}
               className={`px-4 py-4 rounded-md ${
                 theme === "light"
-                  ? "bg-yellow-500 text-white hover:bg-yellow-600"
-                  : "bg-yellow-400 text-black hover:bg-yellow-500"
+                  ? "bg-blue-500 text-white hover:bg-blue-600"
+                  : "bg-blue-400 text-black hover:bg-blue-500"
               }`}
             >
               <IoIosArrowForward />
