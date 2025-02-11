@@ -21,7 +21,7 @@ const AboutUs = () => {
           {/* Heading Section */}
           <h1
             className={`text-4xl font-extrabold text-center mb-8 ${
-              theme === "dark" ? "text-neon-green" : "text-green-600"
+              theme === "dark" ? "text-neon-green" : "text-blue-600"
             }`}
           >
             About Task Trade
@@ -46,7 +46,7 @@ const AboutUs = () => {
             >
               <h2
                 className={`text-3xl font-semibold mb-4 ${
-                  theme === "dark" ? "text-neon-green" : "text-green-600"
+                  theme === "dark" ? "text-neon-green" : "text-blue-600"
                 }`}
               >
                 Our Mission
@@ -69,7 +69,7 @@ const AboutUs = () => {
             >
               <h2
                 className={`text-3xl font-semibold mb-4 ${
-                  theme === "dark" ? "text-neon-green" : "text-green-600"
+                  theme === "dark" ? "text-neon-green" : "text-blue-600"
                 }`}
               >
                 Our Vision
@@ -90,7 +90,7 @@ const AboutUs = () => {
           <div className="text-center mb-16">
             <h2
               className={`text-3xl font-extrabold mb-6 ${
-                theme === "dark" ? "text-neon-green" : "text-green-600"
+                theme === "dark" ? "text-neon-green" : "text-blue-600"
               }`}
             >
               Meet Our Team
@@ -182,7 +182,7 @@ const AboutUs = () => {
           >
             <h2
               className={`text-3xl font-extrabold mb-6 ${
-                theme === "dark" ? "text-neon-green" : "text-green-600"
+                theme === "dark" ? "text-neon-green" : "text-blue-600"
               }`}
             >
               Our Services
@@ -321,7 +321,7 @@ const AboutUs = () => {
           <div className="text-center">
             <h2
               className={`text-3xl font-extrabold mb-6 ${
-                theme === "dark" ? "text-neon-green" : "text-green-600"
+                theme === "dark" ? "text-neon-green" : "text-blue-600"
               }`}
             >
               Get in Touch
